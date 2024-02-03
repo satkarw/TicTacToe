@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-board">
+        <div class="tic-box box1"></div>
+        <div class="tic-box box2"></div>
+        <div class="tic-box box3"></div>
+        <div class="tic-box box4"></div>
+        <div class="tic-box box5"></div>
+        <div class="tic-box box6"></div>
+        <div class="tic-box box7"></div>
+        <div class="tic-box box8"></div>
+        <div class="tic-box box9"></div>
+      </div>
+      <div class="score-container">
+        <p>Player (X)</p>
+        <p>Tie</p>
+        <p>Computer (O)</p>
+        <p id="winScore"></p>
+        <p id="tieScore"></p>
+        <p id="loseScore"></p>
+      </div>
+      <button onclick="reset()" class="reset-btn">Replay</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

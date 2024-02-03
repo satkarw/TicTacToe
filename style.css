@@ -1,0 +1,168 @@
+html {
+  font-size: 10px;
+  height: 95vh;
+}
+
+body {
+  font-size: 15.2px;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  background: black;
+  color: white;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: 15.2rem 15.2rem 15.2rem;
+}
+
+.tic-box {
+  /* border: 0.285rem solid white; */
+  height: 15.2rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.box2 {
+  border: 0.475rem solid white;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.box4 {
+  border-top: 0.475rem solid white;
+  border-bottom: 0.285rem solid white;
+}
+
+.box5 {
+  border: 0.475rem solid white;
+}
+
+.box6 {
+  border-top: 0.475rem solid white;
+  border-bottom: 0.285rem solid white;
+}
+
+.box8 {
+  border: 0.475rem solid white;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.score-container {
+  display: grid;
+  grid-template-columns: 0.95fr 0.95fr 0.95fr;
+  place-content: center;
+  place-items: center;
+  font-size: 1.9rem;
+  margin-top: 1.9rem;
+}
+
+.score-container p {
+  margin: 0.38rem;
+}
+
+@keyframes cross {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+.xDiv {
+  width: 14.25rem; /* Adjust as needed */
+  height: 14.25rem; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: cross 0.095s ease;
+}
+
+.xDiv::before,
+.xDiv::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-47.5%, -47.5%) rotate(-45deg);
+  width: 1.425rem;
+  height: 11.21rem;
+  display: block;
+  background: white;
+  border-radius: 2.85px;
+}
+
+.xDiv::after {
+  transform: translate(-47.5%, -47.5%) rotate(45deg);
+}
+
+.oDiv {
+  width: 7.6rem;
+  height: 7.6rem;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  border: 9.5px solid white;
+  border-radius: 50%;
+  content: "";
+  margin-left: 2.375rem;
+  animation: toe 0.095s ease;
+}
+
+@keyframes toe {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+.winning-moves {
+  animation: won 0.475s ease-in-out infinite alternate;
+}
+
+@keyframes won {
+  from {
+    background: black;
+  }
+
+  to {
+    background: rgb(34.2, 34.2, 34.2);
+  }
+}
+
+.reset-btn {
+  padding: 9.5px 19px;
+  color: white;
+  font-weight: 500;
+  font-size: 19px;
+  border: 1.9px solid white;
+  border-radius: 9.5px;
+  background: none;
+  position: relative;
+  left: 38%;
+  margin-top: 19px;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+  .container {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  html {
+    font-size: 7px;
+  }
+  .container {
+    margin-top: 30px;
+  }
+}
